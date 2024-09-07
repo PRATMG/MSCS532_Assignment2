@@ -20,13 +20,13 @@ def memory_test(func, data):
     return execution_time, peak / 10**6 #converting memory to MB
 
 #testing merge sort
-print("Merge SOrt Resut: ")
+print("Merge Sort Resut: ")
 for data, name in zip([sorted_data, reversed_sorted_data, random_data], ["Sorted", "Reverse Sorted", "Random"]):
     time_taken, mem_used = memory_test(merge_sort, data[:])
     print(f"{name}: Time = {time_taken: .6f} sec, Peak Memory = {mem_used:.2f} MB")
 
 #testing quick sort
-print("\nQuick SOrt Results: ")
+print("\nQuick Sort Results: ")
 for data, name in zip([sorted_data, reversed_sorted_data, random_data], ["Sorted", "Reverse Sorted", "Random"]):
     time_taken, mem_used = memory_test(quick_sort, data[:])
     print(f"{name}: Time = {time_taken: .6f} sec, Peak Memory = {mem_used: .2f} MB")
